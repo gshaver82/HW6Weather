@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Weather Dashboard</title>
+
+</head>
+
+<body>
+  <header class="container-fluid text-light text-center bg-dark">
+    <h1><strong>Weather Dashboard</strong></h1>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 bg-light">
+        <strong>Search for a city:</strong>
+        <div class="input-group ">
+          <input type="text" class="form-control" placeholder="City">
+          <div class="input-group-append">
+            <button class="btn btn-primary" id="searchBtn" type="button">Search</button>
+          </div>
+        </div>
+        <div class="list-group">
+          <button type="button" class="btncust list-group-item list-group-item-action">Atlanta</button>
+          <button type="button" class="btncust list-group-item list-group-item-action">Austin</button>
+          <button type="button" class="btncust list-group-item list-group-item-action">Minneapolis</button>
+          <button type="button" class="btncust list-group-item list-group-item-action">San Francisco</button>
+          <button type="button" class="btncust list-group-item list-group-item-action">Miami</button>
+        </div>
+      </div>
+      <div class="col-md-9 bg-dark ">
+        <div class="col bg-light mt-3">
+          <h2>
+            <span id="cityid">city</span>
+            <span id="date">date</span>
+            <span><img id="currentIcon" src="" alt="icon" width="50" height="50"></span>
+          </h2>
+          <P>Temperature: <span id="Temperature">XX</span>°F</P>
+          <P>Humidity: <span id="Humidity">XX</span>%</P>
+          <P>Wind Speed: <span id="Wind">XX</span> MPH</P>
+          <P>UV Index: <span id="UV" >XX</span></P>
+        </div>
+        <div class="col-md bg-light mb-3 ">
+          <h3><strong>Five Day Forecast:</strong></h3>
+
+          <div class="card-deck">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title" id="1Date">Card date</h5>
+                <img id="1img" class="card-img" src="..." alt="Card image" width="50" height="50">
+                <P>Temp: <span id="1Temp">XX</span>°F</P>
+                <P>Humidity: <span id="1Hum">XX</span>%</P>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title" id="2Date">Card date</h5>
+                <img id="2img" class="card-img" src="..." alt="Card image">
+                <P>Temp: <span id="2Temp">XX</span>°F</P>
+                <P>Humidity: <span id="2Hum">XX</span>%</P>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title" id="3Date">Card date</h5>
+                <img id="3img" class="card-img" src="..." alt="Card image">
+                <P>Temp: <span id="3Temp">XX</span>°F</P>
+                <P>Humidity: <span id="3Hum">XX</span>%</P>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title" id="4Date">Card date</h5>
+                <img id="4img" class="card-img" src="..." alt="Card image">
+                <P>Temp: <span id="4Temp">XX</span>°F</P>
+                <P>Humidity: <span id="4Hum">XX</span>%</P>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title" id="5Date">Card date</h5>
+                <img id="5img" class="card-img" src="..." alt="Card image">
+                <P>Temp: <span id="5Temp">XX</span>°F</P>
+                <P>Humidity: <span id="5Hum">XX</span>%</P>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
