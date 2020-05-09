@@ -90,20 +90,15 @@ function api() {
                     var icon2 = results.daily[i].weather[0].icon;
                     var iconstring2 = 'http://openweathermap.org/img/wn/' + icon2 + '.png';
                     $("#" + i + "img").attr("src", iconstring2);
-                    // $("#" + i + "Date").text("d" + i);
                     $("#" + i + "Temp").text(temp2);
                     $("#" + i + "Hum").text(humidity2);
 
 
-                    //how to moment format this??
-                    var TempTime = moment().add(i, 'days').calendar();
+                    var TempTime = moment().add(i, 'days');
+                    TempTime = TempTime.format('dddd MMM Do');
                     $("#" + i + "Date").text(TempTime);
 
-                    // var TempTime = moment().add(i, 'days').calendar();
-
-
-                    // moment(TempTime).format("ddd, hA");
-                    // $("#" + i + "Date").text(TempTime);
+                    // TempTime = TempTime.format('dddd MMM do');
 
                 }
             });
